@@ -8,6 +8,7 @@
 import FoundationModels
 import Foundation
 
+@MainActor
 public class MotivaGen  {
     
     init () {
@@ -15,7 +16,7 @@ public class MotivaGen  {
     
     
     
-    func generate(Input: String) async -> String {
+    func generate(input: String) async -> String {
         
         let instructions = """
 
@@ -32,7 +33,7 @@ public class MotivaGen  {
         let session = LanguageModelSession(instructions: instructions)
         
         do{
-            let response = try await session.respond(to: "Motive o usuário a escalar uma montanha")
+            let response = try await session.respond(to: "Motive o usuário a \(input)")
             return response.content
         }catch {
             print("erro ao gerar conteúdo")
