@@ -9,9 +9,22 @@ import FoundationModels
 import Playgrounds
 
 #Playground {
-    let session = LanguageModelSession()
     
-    let response = try await session.respond(to: "Diga oi em 3 línguas diferentes")
+    let instructions = """
+
+        Dê uma frase para engajar o usuário a realizar determinada ação.
     
-    print(response)
+        A frase deve ser engraçada
+    
+        A frase deve ter um tom de frase dita por uma mãe bem humorada 
+    
+        A frase gerada também deve ser curta, não passando de 25 palavras
+    """
+    
+    
+    let session = LanguageModelSession(instructions: instructions)
+    
+    let response = try await session.respond(to: "Motive o usuário a fazer academia")
+    
+    print(response.content)
 }
