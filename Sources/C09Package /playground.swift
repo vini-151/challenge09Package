@@ -16,7 +16,7 @@ import Playgrounds
     
         A frase deve ser engraçada
     
-        A frase deve ter um tom de frase dita por uma mãe bem humorada 
+        A frase deve ter um tom de frase dita por uma mãe dando bronca
     
         A frase gerada também deve ser curta, não passando de 25 palavras
     """
@@ -24,7 +24,7 @@ import Playgrounds
     
     let session = LanguageModelSession(instructions: instructions)
     
-    let response = try await session.respond(to: "Motive o usuário a fazer academia")
+    let response = try await session.respond(to: "Motive o usuário a escalar uma montanha")
     
     print(response.content)
 }
