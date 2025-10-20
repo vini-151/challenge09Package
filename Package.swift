@@ -4,20 +4,20 @@
 import PackageDescription
 
 let package = Package(
-    name: "C09Package ",
+    name: "FMTesting",
     platforms: [.iOS(.v26)],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "C09Package ",
-            targets: ["C09Package "]
+            name: "FMTesting",
+            targets: ["FMTesting"]
         ),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "C09Package "
+            name: "FMTesting"
         ),
 
     ]
